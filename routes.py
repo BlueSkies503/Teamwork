@@ -1,4 +1,7 @@
-from flask import Flask
+from flask import (
+    Flask,
+    render_template,
+)
 from random import randint
 
 
@@ -11,8 +14,8 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world():
-    return "<h1>Hello, World!</h1>"
+def index():
+    return render_template('index.html', who="World")
 
 
 @app.route("/rand_num")
