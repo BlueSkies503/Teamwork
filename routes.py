@@ -19,8 +19,8 @@ def index():
 
 
 @app.route("/rand_num")
-def rand_element():
-    return f"<h1>{randint(LOWER, UPPER)}</h1>"
+def rand_num():
+    return render_template("rand_num.html", num=randint(LOWER, UPPER))
 
 
 if __name__ == "__main__":
